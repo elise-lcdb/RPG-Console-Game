@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{3CCD40D3-30EC-47E3-9348-5AD578EEFE7C}|Default">
+  <MonoDevelop.Ide.ItemProperties.Console__Game__V2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Console_Game_V2/Map.cs">
+    <Files>
+      <File FileName="Console_Game_V2/Program.cs" Line="10" Column="13" />
+      <File FileName="Console_Game_V2/Menu.cs" Line="43" Column="36" />
+      <File FileName="Console_Game_V2/Player.cs" Line="33" Column="30" />
+      <File FileName="Console_Game_V2/Game.cs" Line="14" Column="27" />
+      <File FileName="Console_Game_V2/Map.cs" Line="169" Column="12" />
+      <File FileName="Console_Game_V2/Attack.cs" Line="291" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

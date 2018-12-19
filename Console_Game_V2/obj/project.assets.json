@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\edebe\\Dropbox\\Console-Game\\Console_Game_V2\\Console_Game_V2.csproj",
+      "projectUniqueName": "C:\\Users\\edebe\\Dropbox\\Console_Game_V2\\Console_Game_V2\\Console_Game_V2.csproj",
       "projectName": "Console_Game_V2",
-      "projectPath": "C:\\Users\\edebe\\Dropbox\\Console-Game\\Console_Game_V2\\Console_Game_V2.csproj",
+      "projectPath": "C:\\Users\\edebe\\Dropbox\\Console_Game_V2\\Console_Game_V2\\Console_Game_V2.csproj",
       "packagesPath": "C:\\Users\\edebe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\edebe\\Dropbox\\Console-Game\\Console_Game_V2\\obj\\",
+      "outputPath": "C:\\Users\\edebe\\Dropbox\\Console_Game_V2\\Console_Game_V2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\edebe\\AppData\\Roaming\\NuGet\\NuGet.Config",

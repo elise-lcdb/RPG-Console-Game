@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{73F5374D-DEDE-461D-9ED8-7791BEEECFCB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Console_Game_V2/Console_Game_V2/Player.cs">
+    <Files>
+      <File FileName="Console-Game/Player.cs" Line="11" Column="9" />
+      <File FileName="Console-Game/Menu.cs" Line="16" Column="28" />
+      <File FileName="Console-Game/Program.cs" Line="14" Column="30" />
+      <File FileName="Console-Game/Game.cs" Line="29" Column="48" />
+      <File FileName="../Console_Game_V2/Console_Game_V2/Program.cs" Line="9" Column="36" />
+      <File FileName="../Console_Game_V2/Console_Game_V2/Menu.cs" Line="41" Column="60" />
+      <File FileName="../Console_Game_V2/Console_Game_V2/Player.cs" Line="28" Column="15" />
+      <File FileName="../Console_Game_V2/Console_Game_V2/Game.cs" Line="19" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Console-Game PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
