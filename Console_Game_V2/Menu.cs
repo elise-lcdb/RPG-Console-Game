@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+
 namespace Console_Game_V2
 {
     public class Menu
@@ -9,13 +11,13 @@ namespace Console_Game_V2
             int Choice = Convert.ToInt32(Console.ReadLine());
             switch (Choice)
             {
-                case 0:
+                case 1:
                     StartGame();
                     break;
-                case 1:
+                case 2:
                     About();
                     break;
-                case 2:
+                case 3:
                     Quit();
                     break;
                 default:
@@ -28,28 +30,34 @@ namespace Console_Game_V2
         public void PrintMenu()
         {
             Console.WriteLine(".___  ___.  _______ .__   __.  __    __  \n|   \\/   | |   ____||  \\ |  | |  |  |  | \n|  \\  /  | |  |__   |   \\|  | |  |  |  | \n|  |\\/|  | |   __|  |  . `  | |  |  |  | \n|  |  |  | |  |____ |  |\\   | |  `--'  | \n|__|  |__| |_______||__| \\__|  \\______/  \n                                         ");
-            Console.WriteLine("0 - Start Game");
-            Console.WriteLine("1 - About Game");
-            Console.WriteLine("2 - Quit Game");
+            Console.WriteLine("1 - Start Game");
+            Console.WriteLine("2 - About Game");
+            Console.WriteLine("3 - Quit Game");
         }
-        //public void AskChoice(int min, int max)
-        //{
-
-        //}
         public void StartGame()
         {
             Console.Clear();
-            Console.WriteLine("Hello. This is Start Game");
             Game game = new Game();
         }
         public void About()
         {
-            Console.WriteLine("Hello, this is what the game is about");
+            Console.Clear();
+            Console.WriteLine("Welcome to my console text-based game made with C#");
+            Thread.Sleep(2000);
+            Console.Clear();
+            Console.WriteLine("In this game your goal is to get home to watch some Netflix without running into other people.");
+            Console.WriteLine("Sometimes you just don't want to socialize with others");
+            Console.WriteLine("Sometimes it is just your lifestyle");
+            Console.WriteLine("Like for me...");
+            Thread.Sleep(10000);
+            Console.Clear();
+            Console.WriteLine("Anyway I hope you enjoy the game!");
             Console.WriteLine("Made by Elise");
+
         }
         public void Quit()
         {
-            Console.WriteLine("Hello. This is quit");
+            Environment.Exit(0);
         }
     }
 }

@@ -39,10 +39,6 @@ namespace Console_Game_V2
             //TODO have the player have an inventory
             //TODO the player could also have a level and that could determine what monsters you fight 
         }
-        public void Attack()
-        {
-            //TODO to make things easier maybe everyone can have the same attack things their life is the only thing that is different
-            //Make an Enum for attacks
-        }
+     
     }
 }

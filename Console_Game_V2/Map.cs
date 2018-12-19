@@ -13,13 +13,15 @@ namespace Console_Game_V2
 
         public Map()
         {
-           
-            //Empty = "Nothing";
-            CurrentPos = "Current Position"; //I don't think I need youuuuuuuu
             StartPosition();
-            Console.WriteLine("Choose a direction to go in?");
-            PrintDirectionChoices();
-            //TODO maybe add a while loop. while posX is not equal to 6 ask for directions?
+            while(CurrentPos != "BOSS")
+            {
+                Console.WriteLine("Choose a direction to go in?");
+                PrintDirectionChoices();
+                UpdatePosition();
+                Cases();
+                Attack combat = new Attack(CurrentPos);
+            }
         }
         public void StartPosition()
         {
@@ -68,7 +70,7 @@ namespace Console_Game_V2
             }
             else if(PositionX == 0 && PositionY != 0 && PositionY != 4)
             {
-                Console.Write("1 - Go Up");
+                Console.WriteLine("1 - Go Up");
                 Console.WriteLine("2 - Go Right");
                 Console.WriteLine("3 - Go Down");
                 int direction = Convert.ToInt32(Console.ReadLine());
@@ -88,26 +90,6 @@ namespace Console_Game_V2
                         break;
                 }
             }
-                //I might not need all of this. if that is my ending point
-            //else if(PositionX == 6 && PositionY == 0)
-            //{
-            //    Console.WriteLine("1 - Go left");
-            //    Console.WriteLine("2 - Go Down");
-            //    int direction = Convert.ToInt32(Console.ReadLine());
-            //}
-            //else if(PositionX == 6 && PositionY == 4)
-            //{
-            //    Console.WriteLine("1 - Go Up");
-            //    Console.WriteLine("2 - Go Left");
-            //    int direction = Convert.ToInt32(Console.ReadLine());
-            //}
-            //else if(PositionX == 6 && PositionY != 0 && PositionY != 4)
-            //{
-            //    Console.WriteLine("1 - Go up");
-            //    Console.WriteLine("2 - Go left");
-            //    Console.WriteLine("3 - Go down");
-            //    int direction = Convert.ToInt32(Console.ReadLine());
-            //}
             else
             {
                 Console.WriteLine("1 - Go Up");
@@ -154,56 +136,48 @@ namespace Console_Game_V2
                     break;
             }
         }
-        public void Dodge()
+      
+        public void Cases()
         {
-            //ConsoleKeyInfo k = new ConsoleKeyInfo();
-            //Console.WriteLine("Press any key in the next 5 seconds.");
-            //for (int cnt = 5; cnt > 0; cnt--)
-            //{
-            //    if (Console.KeyAvailable == true)
-            //    {
-            //        k = Console.ReadKey();
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine(cnt.ToString());
-            //        System.Threading.Thread.Sleep(1000);
-            //    }
-            //}
-            //Console.WriteLine("The key pressed was " + k.Key);
-        }
-        public void EmptySpot()
-        {
-            Console.WriteLine("So far so good");
-        }
-        public void EnemyLvl1()
-        {
-            //List the enemy spots. Then do an if dodge == "true" then do nothing well ask for new directions 
-            //If dodge is equal to false then call the enemy to attack. Actually I think those could be done in the seprate 
-            //if dodge == false
-            //If unable to dodge the player has been spotted 
-            //TODO what happens when the player lands on a case that has an enemy
-            //TODO create an attack method in player and allow the player to choose between different attack options
-            //TODO create an attack method in enemy that randomly chooses attacks
+            if((PositionX == 0 && PositionY == 1) || (PositionX == 0 && PositionY == 3) || (PositionX == 1 && PositionY == 2) || (PositionX == 2 && PositionY == 0) || (PositionX == 2 && PositionY == 4) || (PositionX == 4 && PositionY == 0) || (PositionX == 4 && PositionY == 2))
+            {
+                Console.WriteLine("So far so good...");
+            }
+            else if((PositionX == 0 && PositionY == 0) || (PositionX == 0 && PositionY == 4) || (PositionX == 2 && PositionY == 2) )
+            {
+                CurrentPos = "ELVL1";
+            }
+            else if((PositionX == 0 && PositionY == 1) || (PositionX == 2 && PositionY == 1) || (PositionX == 2 && PositionY == 3) || (PositionX == 3 && PositionY == 0) || (PositionX == 3 && PositionY == 2))
+            {
+                CurrentPos = "ELVL2";
+            }
+            else if((PositionX == 1 && PositionY == 4) || (PositionX == 3 && PositionY == 4) || (PositionX == 4 && PositionY == 1) || (PositionX == 4 && PositionY == 3) || (PositionX == 5 && PositionY == 0) || (PositionX == 5 && PositionY == 2))
+            {
+                CurrentPos = "ELVL3";
+            }
+            else if((PositionX == 1 && PositionY == 1) || (PositionX == 1 && PositionY == 3) || (PositionX == 3 && PositionY == 1) || (PositionX == 3 && PositionY == 3) || (PositionX == 4 && PositionY == 4) || (PositionX == 5 && PositionY == 1) || (PositionX == 5 && PositionY == 3) || (PositionX == 5 && PositionY == 4))
+            {
+                CurrentPos = "MOREHEALTH";
+            }
+            else
+            {
+                CurrentPos = "BOSS";
+            }
         }
         public void EnemyLvl2()
         {
-            //If inventory item added like sunglasses and hoodie combined, then not seen else. attack
+            CurrentPos = "ELVL2";
 
         }
         public void EnemyLvl3()
         {
-            //If dodged behind a car, then not seen else. attack
+            CurrentPos = "ELVL3";
 
         }
         public void EnemyBoss()
         {
-            //Their ain't no hiding from your ex
+            CurrentPos = "BOSS";
         }
-        public void InventoryItem()
-        {
-
-        }
+       
     }
 }
