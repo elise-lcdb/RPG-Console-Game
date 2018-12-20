@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 
 namespace Console_Game_V2
@@ -17,10 +17,10 @@ namespace Console_Game_V2
         public Attack(string compare)
         {
             PlayerHealth = 100;
-            Enemy1Health = 10;
-            Enemy2Health = 15;
-            Enemy3Health = 25;
-            Boss1Health = 35;
+            Enemy1Health = 20;
+            Enemy2Health = 25;
+            Enemy3Health = 35;
+            Boss1Health = 45;
 
             if (compare == "MOREHEALTH")
             {
@@ -30,9 +30,9 @@ namespace Console_Game_V2
             }
             else if (compare == "ELVL1")
             {
-                Console.BackgroundColor = ConsoleColor.Red;
+               
                 Console.WriteLine("Oh no! It is someone from Amnesty International volunteer trying to get you to sign their petition!");
-                Console.BackgroundColor = ConsoleColor.White;
+               
                 Console.WriteLine("Quick you have 5 seconds to hide!");
                 PrintDodgeChoices();
                 DodgeTimer();
@@ -45,9 +45,8 @@ namespace Console_Game_V2
                         Console.WriteLine("Thank god. You managed to escape the Amnesty International volunteer");
                         break;
                     case 3:
-                        Console.BackgroundColor = ConsoleColor.Red;
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+                     
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -71,9 +70,9 @@ namespace Console_Game_V2
                         break;
                     case 4:
                         Console.WriteLine("Are you serious? Do you think this is Harry Potter?");
-                        Console.BackgroundColor = ConsoleColor.Red;
+                       
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+                       
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -85,7 +84,7 @@ namespace Console_Game_V2
                             }
                             else if (PlayerHealth <= 0)
                             {
-                                Console.BackgroundColor = ConsoleColor.Red;
+
                                 Console.WriteLine("You have been killed... Guess you won't be able to go home and watch some Netflix. ");
                                 Console.WriteLine("Atleast when you are dead, you don't have to talk to others");
                                 Thread.Sleep(5000);
@@ -98,9 +97,9 @@ namespace Console_Game_V2
                         }
                         break;
                     default:
-                        Console.BackgroundColor = ConsoleColor.Red;
+                       
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -129,18 +128,18 @@ namespace Console_Game_V2
             }
             else if (compare == "ELVL2")
             {
-                Console.BackgroundColor = ConsoleColor.Red;
+
                 Console.WriteLine("Oh no! It is someone from High School!");
-                Console.BackgroundColor = ConsoleColor.White;
+               
                 Console.WriteLine("Quick you have 5 seconds to hide!");
                 PrintDodgeChoices();
                 DodgeTimer();
                 switch (DodgeChoice)
                 {
                     case 1:
-                        Console.BackgroundColor = ConsoleColor.Red;
+                       
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+                     
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -172,9 +171,9 @@ namespace Console_Game_V2
                         break;
                     case 4:
                         Console.WriteLine("Are you serious? Do you think this is Harry Potter?");
-                        Console.BackgroundColor = ConsoleColor.Red;
+                     
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+                       
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -199,9 +198,9 @@ namespace Console_Game_V2
                         }
                         break;
                     default:
-                        Console.BackgroundColor = ConsoleColor.Red;
+                       
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+                       
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -230,18 +229,18 @@ namespace Console_Game_V2
             }
             else if (compare == "ELVL3")
             {
-                Console.BackgroundColor = ConsoleColor.Red;
+
                 Console.WriteLine("Oh no! It is Aunt Lynda! She probably hates you and complains about you all of the time");
-                Console.BackgroundColor = ConsoleColor.White;
+               
                 Console.WriteLine("Quick you have 5 seconds to hide!");
                 PrintDodgeChoices();
                 DodgeTimer();
                 switch (DodgeChoice)
                 {
                     case 1:
-                        Console.BackgroundColor = ConsoleColor.Red;
+                      
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+                       
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -266,9 +265,9 @@ namespace Console_Game_V2
                         }
                         break;
                     case 2:
-                        Console.BackgroundColor = ConsoleColor.Red;
+
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+                       
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -293,9 +292,9 @@ namespace Console_Game_V2
                         }
                         break;
                     case 3:
-                        Console.BackgroundColor = ConsoleColor.Red;
+                      
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+                       
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -328,9 +327,9 @@ namespace Console_Game_V2
                         Thread.Sleep(2000);
                         break;
                     default:
-                        Console.BackgroundColor = ConsoleColor.Red;
+
                         Console.WriteLine("You were spotted!");
-                        Console.BackgroundColor = ConsoleColor.White;
+                       
                         while (a == 0)
                         {
                             PlayerAttackOptions();
@@ -359,9 +358,8 @@ namespace Console_Game_V2
             }
             else if (compare == "BOSS")
             {
-                Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine("Oh God No! It is your Ex!");
-                Console.BackgroundColor = ConsoleColor.White;
+   
                 Console.WriteLine("Quick you have 5 seconds to hide!");
                 PrintDodgeChoices();
                 DodgeTimer();
@@ -467,7 +465,7 @@ namespace Console_Game_V2
             switch (PlayerAttackChoice)
             {
                 case 1:
-                   Enemy1Health = Enemy1Health - 1;
+                    Enemy1Health = Enemy1Health - 1;
                     break;
                 case 2:
                     Enemy1Health = Enemy1Health - 5;
